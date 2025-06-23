@@ -12,7 +12,7 @@ export default function ProductCardAdm({ product, onDelete }){
         <img
           src={product.imagem}
 
-          alt={product.name}
+          alt={product.nome}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
       </div>
@@ -25,7 +25,7 @@ export default function ProductCardAdm({ product, onDelete }){
         </div>
         
         <h3 className="text-lg font-semibold text-gray-900 mb-2">
-          {product.name}
+          {product.nome}
         </h3>
         
         <p className="text-sm text-gray-600 mb-4 line-clamp-2">
