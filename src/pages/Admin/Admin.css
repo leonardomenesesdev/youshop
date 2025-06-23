@@ -1,0 +1,185 @@
+/* src/pages/Admin.css */
+
+body {
+  margin: 0;
+  background-color: #F2F2F0;
+  padding: 09;
+  font-family: sans-serif;
+  height: 100%; /* Garante que o body ocupe toda a altura da tela */
+  overflow-x: hidden;
+}
+
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centraliza verticalmente */
+  min-height: 100vh;        /* Ocupa toda a altura da tela */
+  min-width: 100vw;         /* Ocupa toda a largura da tela */
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #111827;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsivo */
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+/* src/pages/Admin.css */
+
+/* ... (seu CSS existente para a página Admin, como h1, .products, etc.) ... */
+
+
+.add-product-btn {
+  padding: 12px 25px;
+  background-color: #111827;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.add-product-btn:hover {
+  background-color: #1f2937;
+}
+
+/* --- ESTILOS DO MODAL E DO FORMULÁRIO --- */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: #111827; /* Cor de fundo principal */
+  color: white; /* Texto padrão branco */
+  padding: 30px 40px; /* Mais preenchimento lateral */
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+}
+
+/* Título dentro do modal */
+.modal-content h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+/* Estilização específica para o formulário DENTRO do modal */
+.modal-content .input-grp {
+    margin-bottom: 15px;
+}
+
+.modal-content .input-grp label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.modal-content .input-grp input,
+.modal-content .input-grp textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 8px;
+    color: white; /* Cor do texto digitado */
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.modal-content .input-grp input:focus,
+.modal-content .input-grp textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.7); /* Efeito de foco */
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.modal-content .input-grp textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Estiliza o texto do placeholder */
+.modal-content .input-grp input::placeholder,
+.modal-content .input-grp textarea::placeholder {
+    color: #e0e0e0;
+    opacity: 0.9;
+}
+
+/* Botões do formulário */
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.submit-btn, .cancel-btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.submit-btn:hover, .cancel-btn:hover {
+    transform: translateY(-2px); /* Efeito de levantar ao passar o mouse */
+}
+
+.submit-btn {
+  background-color: #4CAF50; /* Verde */
+  color: white;
+}
+
+.cancel-btn {
+  background-color: red; /* Cinza */
+  color: white;
+}
